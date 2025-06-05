@@ -6,34 +6,110 @@
   <title>LavaCraft | سرور ماینکرفت</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" type="image/png" />
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="logo">🔥 <span class="lava-font">LavaCraft</span></div>
-
-      <div class="site-banner">
-        <img src="amiroff008/test22/image.jpg" alt="LavaCraft Logo" class="banner-image" />
-        <span class="banner-text">سایت سرور لاوا کرافت</span>
-      </div>
-
-      <button id="themeToggle" title="تغییر تم صفحه" class="vazirmatn-font">🌓 تغییر تم صفحه</button>
+      <div class="logo">🔥 LavaCraft</div>
+      <button id="themeToggle" title="تغییر تم صفحه">🌓 تغییر تم صفحه</button>
     </header>
 
     <section class="intro">
       <h2>🎮 به سرور ماینکرفت LavaCraft خوش آمدید!</h2>
       <p>
-        LavaCraft یک سرور فعال، هیجان‌انگیز و دوستانه برای همه بازیکنان جاوا و بدراک است. از نسخه 1.8 به بالا در Java و از 1.21.50 به بالا در Bedrock پشتیبانی می‌شود.
+        LavaCraft یک سرور فعال، هیجان‌انگیز و دوستانه برای همه بازیکنان جاوا و بدراک است. از نسخه 1.8 به بالا در Java و از 1.21.5 به بالا در Bedrock پشتیبانی می‌شود.
       </p>
       <div class="ip-box">
         <p><strong>IP سرور:</strong> LavaCraftSv.aternos.me:54314</p>
-        <p><strong>نسخه:</strong> Java (1.8+) | Bedrock (1.21.50+)</p>
+        <p><strong>نسخه:</strong> Java (1.8+) | Bedrock (1.21.5+)</p>
       </div>
       <a href="https://t.me/Lava_Craft0" class="btn">ورود به کانال تلگرام</a>
     </section>
 
-    <!-- ادامه بخش‌های دیگر بدون تغییر ... -->
+    <section class="ranks">
+      <h2>💎 خرید رنک‌های ویژه</h2>
+      <div class="rank-grid">
+        <div class="rank">
+          <div class="rank-title">MVP</div>
+          <div class="rank-details">
+            <p>دسترسی به /fly و دریافت کیت مخصوص</p>
+            <a href="https://t.me/off_tor" class="buy-btn">خرید</a>
+          </div>
+        </div>
+        <div class="rank">
+          <div class="rank-title">VIP</div>
+          <div class="rank-details">
+            <p>دسترسی به /home بیشتر و اولویت در صف</p>
+            <a href="https://t.me/off_tor" class="buy-btn">خرید</a>
+          </div>
+        </div>
+        <div class="rank">
+          <div class="rank-title">ELITE</div>
+          <div class="rank-details">
+            <p>دسترسی به /nick و /hat و چت رنگی</p>
+            <a href="https://t.me/off_tor" class="buy-btn">خرید</a>
+          </div>
+        </div>
+        <div class="rank">
+          <div class="rank-title">LEGEND</div>
+          <div class="rank-details">
+            <p>دسترسی کامل به تمام امکانات و تگ خاص در سرور</p>
+            <a href="https://t.me/off_tor" class="buy-btn">خرید</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="claim-toggle" onclick="toggleClaim()">🧱 تعرفه خرید کلیم بلاک (کلیک کنید)</div>
+      <div class="claim-details">
+        <div class="claim-grid">
+          <div class="claim-item">
+            <span>1k ClaimBlock</span>
+            <div class="claim-info">
+              <div class="price">10,000 تومان</div>
+              <a href="https://t.me/off_tor" class="buy-btn">خرید</a>
+            </div>
+          </div>
+          <div class="claim-item">
+            <span>5k ClaimBlock</span>
+            <div class="claim-info">
+              <div class="price">40,000 تومان</div>
+              <a href="https://t.me/off_tor" class="buy-btn">خرید</a>
+            </div>
+          </div>
+          <div class="claim-item">
+            <span>10k ClaimBlock</span>
+            <div class="claim-info">
+              <div class="price">75,000 تومان</div>
+              <a href="https://t.me/off_tor" class="buy-btn">خرید</a>
+            </div>
+          </div>
+          <div class="claim-item">
+            <span>20k ClaimBlock</span>
+            <div class="claim-info">
+              <div class="price">140,000 تومان</div>
+              <a href="https://t.me/off_tor" class="buy-btn">خرید</a>
+            </div>
+          </div>
+          <div class="claim-item">
+            <span>30k ClaimBlock</span>
+            <div class="claim-info">
+              <div class="price">200,000 تومان</div>
+              <a href="https://t.me/off_tor" class="buy-btn">خرید</a>
+            </div>
+          </div>
+          <div class="claim-item">
+            <span>50k ClaimBlock</span>
+            <div class="claim-info">
+              <div class="price">300,000 تومان</div>
+              <a href="https://t.me/off_tor" class="buy-btn">خرید</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="buy-text">جهت خرید آیتم مورد نظر روی گزینه زیر کلیک کنید.</p>
+      <a href="https://t.me/off_tor" class="btn">پیام به فروشنده</a>
+    </section>
 
     <footer>
       © LavaCraft 2025 | طراحی‌شده با ❤️
@@ -41,4 +117,4 @@
   </div>
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
