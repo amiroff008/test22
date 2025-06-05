@@ -17,3 +17,10 @@ function toggleClaim() {
   const detail = document.querySelector(".claim-details");
   detail.classList.toggle("open");
 }
+
+// باز و بسته کردن جزئیات رنک با کلیک
+document.querySelectorAll(".rank").forEach((rank) => {
+  rank.addEventListener("click", () => {
+    rank.classList.toggle("open");
+  });
+});

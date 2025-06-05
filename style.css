@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
 
 :root {
   --bg-light: #f2f2f2;
@@ -34,21 +34,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
 }
 
 .logo {
   font-size: 2rem;
   color: var(--accent);
-}
-
-.lava-font {
-  font-family: 'Roboto', sans-serif;
-}
-
-.vazirmatn-font {
-  font-family: 'Vazirmatn', sans-serif;
 }
 
 #themeToggle {
@@ -58,32 +48,6 @@ header {
   cursor: pointer;
   color: inherit;
 }
-
-/* ✅ کادر سایت سرور لاوا کرافت */
-.site-banner {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, #ffe0b2, #ffccbc);
-  border: 2px solid var(--accent);
-  border-radius: 12px;
-  padding: 0.5rem 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.banner-image {
-  width: 30px;
-  height: 30px;
-  margin-left: 0.7rem;
-  border-radius: 5px;
-  object-fit: contain;
-}
-
-.banner-text {
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-/* ادامه‌ی استایل‌های قبلی بدون تغییر */
 
 .intro .ip-box {
   background: var(--card-light);
@@ -114,7 +78,7 @@ body.dark .intro .ip-box {
 
 .rank-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* چهار ستون برای چهار رنک */
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -138,19 +102,17 @@ body.dark .rank {
   background: var(--card-dark);
 }
 
+/* انیمیشن فریم RGB برای رنک‌ها روی هاور */
 @keyframes rgbBorder {
-  0% { border-color: red; }
-  25% { border-color: green; }
-  50% { border-color: blue; }
-  75% { border-color: yellow; }
+  0%   { border-color: red; }
+  25%  { border-color: green; }
+  50%  { border-color: blue; }
+  75%  { border-color: yellow; }
   100% { border-color: red; }
 }
 
-.rank:hover {
-  animation: rgbBorder 3s linear infinite;
-  border-width: 3px;
-}
 
+/* نمایش جزئیات رنک روی هاور (باز/بسته شدن خودکار) */
 .rank-details {
   max-height: 0;
   opacity: 0;
@@ -159,17 +121,20 @@ body.dark .rank {
   margin-top: 0.8rem;
 }
 
-.rank:hover .rank-details {
+.rank.open .rank-details {
   max-height: 200px;
   opacity: 1;
 }
 
+
+/* عنوان رنک */
 .rank-title {
   font-weight: 700;
   font-size: 1.8rem;
   margin-bottom: 0.3rem;
 }
 
+/* دکمه خرید داخل رنک */
 .buy-btn {
   display: inline-block;
   margin-top: 1rem;
@@ -186,6 +151,7 @@ body.dark .rank {
   background: #e64a19;
 }
 
+/* بخش کلیم */
 .claim-toggle {
   background: var(--accent);
   color: white;
@@ -241,6 +207,7 @@ body.dark .rank {
   transition: border-color 0.3s ease;
 }
 
+/* انیمیشن فریم RGB روی هاور کلیم‌ها */
 .claim-item:hover {
   animation: rgbBorder 3s linear infinite;
   border-width: 3px;
@@ -250,6 +217,7 @@ body.dark .claim-item {
   background: var(--card-dark);
 }
 
+/* اطلاعات داخل آیتم کلیم */
 .claim-info {
   margin-top: 0.7rem;
   opacity: 0;
@@ -278,4 +246,9 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #777;
-  }
+}
+
+.rank.open {
+  animation: rgbBorder 3s linear infinite;
+  border-width: 3px;
+}
